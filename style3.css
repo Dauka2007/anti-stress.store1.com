@@ -1,0 +1,54 @@
+/* Оформление секции с отзывами */
+.reviews {
+    background-color: #f9f9f9; /* Светлый фон */
+    padding: 20px; /* Отступы внутри */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.reviews h2 {
+    font-size: 24px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
+    text-align: center; /* Выравнивание по центру */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.review-item {
+    background-color: #fff; /* Белый фон для каждого отзыва */
+    padding: 15px; /* Отступы внутри */
+    margin-bottom: 10px; /* Отступ снизу */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.review-item p {
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Оформление секции с доставкой */
+.delivery-info {
+    background-color: #e2f1f8; /* Голубой фон */
+    padding: 20px; /* Отступы внутри */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.delivery-info h2 {
+    font-size: 24px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
+    text-align: center; /* Выравнивание по центру */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.delivery-info p {
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    text-align: center; /* Выравнивание текста по центру */
+}

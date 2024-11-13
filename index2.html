@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антистресс-игрушки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <!-- Шапка с кнопкой корзины -->
+    <header class="header">
+        <h1>Anti-stress store</h1>
+        <button id="cart-button" onclick="toggleCart()">Корзина (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <!-- Каталог товаров с категориями -->
+    <section class="catalog">
+        <h2>Каталог антистресс-игрушек</h2>
+
+        <!-- Категория: Игрушки для детей -->
+        <div class="category">
+            <h3>Игрушки для детей</h3>
+            <div class="container">
+                <div class="product" data-name="Поп-ит" data-price="1500">
+                    <img src="https://media.glamour.ru/photos/61694eca854ef439051b36e1/master/w_1600%2Cc_limit/%25D0%25B1%25D0%25B5%25D0%25B3%25D1%2583%25D1%2589%25D0%25B8%25D0%25B8%25CC%2586%2520%25D0%25BF%25D0%25BE%25D0%25BF%25D0%25B8%25D1%2582.jpg" alt="Поп-ит">
+                    <h3>Поп-ит</h3>
+                    <p class="price">1500 тг</p>
+                    <button class="add-to-cart" onclick="addToCart('Поп-ит', 1500)">Добавить в корзину</button>
+                </div>
+                <div class="product" data-name="Сквиши" data-price="2000">
+                    <img src="https://images.satu.kz/227439445_w600_h600_227439445.jpg" alt="Сквиши">
+                    <h3>Сквиши</h3>
+                    <p class="price">2000 тг</p>
+                    <button class="add-to-cart" onclick="addToCart('Сквиши', 2000)">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Категория: Игрушки для офиса -->
+        <div class="category">
+            <h3>Игрушки для офиса</h3>
+            <div class="container">
+                <div class="product" data-name="Антистрессовый мяч" data-price="1800">
+                    <img src="https://simg.marwin.kz/media/catalog/product/cache/8d1771fdd19ec2393e47701ba45e606d/p/u/puffer_ball_igrushka_antistres_1437897_1.png" alt="Антистрессовый мяч">
+                    <h3>Антистрессовый мяч</h3>
+                    <p class="price">1800 тг</p>
+                    <button class="add-to-cart" onclick="addToCart('Антистрессовый мяч', 1800)">Добавить в корзину</button>
+                </div>
+                <div class="product" data-name="Ручка-антистресс" data-price="1200">
+                    <img src="https://ae01.alicdn.com/kf/Sc32c9125873f487eb367b4a353871578N.jpg" alt="Ручка-антистресс">
+                    <h3>Ручка-антистресс</h3>
+                    <p class="price">1200 тг</p>
+                    <button class="add-to-cart" onclick="addToCart('Ручка-антистресс', 1200)">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Категория: Игрушки для взрослых -->
+        <div class="category">
+            <h3>Игрушки для взрослых</h3>
+            <div class="container">
+                <div class="product" data-name="Кубик-антистресс" data-price="1700">
+                    <img src="https://ae04.alicdn.com/kf/S09479d0f83c54361a2316e92d6fbe66dS.jpg_640x640.jpg" alt="Кубик-антистресс">
+                    <h3>Кубик-антистресс</h3>
+                    <p class="price">1700 тг</p>
+                    <button class="add-to-cart" onclick="addToCart('Кубик-антистресс', 1700)">Добавить в корзину</button>
+                </div>
+                <div class="product" data-name="Брелок-антистресс" data-price="1300">
+                    <img src="https://ir-3.ozone.ru/s3/multimedia-6/c1000/6478151142.jpg" alt="Брелок-антистресс">
+                    <h3>Брелок-антистресс</h3>
+                    <p class="price">1300 тг</p>
+                    <button class="add-to-cart" onclick="addToCart('Брелок-антистресс', 1300)">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно корзины -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close" id="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <p><strong>Общая сумма: </strong><span id="total-price">0</span> тг</p>
+            <button id="checkout-button" onclick="checkout()">Оформить заказ</button>
+        </div>
+    </div>
+
+                <!-- Раздел с отзывами -->
+                <section class="reviews">
+                    <h2>Отзывы</h2>
+                    <div class="review-item">
+                        <p>Хорошее качество, закажем снова! — Абылай</p>
+                    </div>
+                    <div class="review-item">
+                        <p>Быстрая доствка и отличное обслуживание! — Али</p>
+                    </div>
+                    <div class="review-item">
+                        <p>5 звезд! — Мария</p>
+                    </div>
+
+
+                    <!-- Добавьте другие отзывы -->
+                </section>
+            
+                <!-- Раздел с информацией об оплате -->
+                <section class="payment">
+                    <h2>Оплата</h2>
+                    <p>Мы принимаем оплату картами Visa, MasterCard, Kaspi Pay ,а Wallet.</p>
+                </section>
+            
+                <!-- Раздел с информацией о доставке -->
+                <section class="delivery-info">
+                    <h2>Доставка</h2>
+                    <p>Доставка по всему Казахстану, сотрудничаем с Яндекс, InDriver, КазПочта.</p>
+                </section>
+            
+
+    <section class="contacts">
+        <h2>Контакты</h2>
+        <p>Номер менеджера: <a href="tel:+77007520972">+7 (700) 752-09-72</a></p>
+        <p>Номер тех поддержки: 
+            <a href="tel:+77071885002">+7 (707) 188-50-02</a>, 
+            <a href="tel:+77002553607">+7 (700) 255-36-07</a>
+        </p>
+        <p>Номер курьера: 
+            <a href="tel:+77771806800">+7 (777) 180-68-00</a>, 
+            <a href="tel:+87476883475">8 (747) 688-34-75</a>
+        </p>
+        <div class="social-links">
+            <a href="https://instagram.com/adi._.lya._.aaa" target="_blank">Instagram: adi._.lya._.aaa</a><br>
+            <a href="https://facebook.com/AdilkhanovDaulet" target="_blank">Facebook: Adilkhanov Daulet</a><br>
+            <a href="https://t.me/nurik_gesse" target="_blank">Telegram: nurik_gesse</a><br>
+            <a href="https://wa.me/77771806800" target="_blank">WhatsApp: +7 (777) 180-68-00</a><br>
+            <a href="https://twitter.com/Davletka2006" target="_blank">Twitter: Davletka2006</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Все права защищены &copy; 2024 Магазин антистресс-игрушек</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
